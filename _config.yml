@@ -1,0 +1,64 @@
+# Basic
+title: 叶炜
+subtitle: 个人博客
+description: 欢迎来到我的个人博客！
+# 头像里面的标题
+avatarTitle: Lyon
+# 头像里面的描述
+avatarDesc: iOS / 机器学习
+url: "http://lyon.wiki"
+
+# Comment
+comment:
+    # disqus: Lyon
+    duoshuo: Lyon 
+
+# Social
+social:
+    weibo: 5485975878 
+    github: ZLCS
+    # twitter: 
+    mail: 275559010@qq.com
+
+# 百度统计 
+# 使用博客模板请去掉或者更换 id 
+baidu:
+    id: ab69018b495da982a7a7eab9599eead4  
+
+# Google Analytics
+# 使用博客模板请去掉或者更换 id
+#ga:
+ #   id: UA-84134159-3   
+ #   host: auto  
+
+
+
+# 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
+
+
+permalink: /:year/:month/:title/
+# Format
+highlighter: rouge
+
+textColor: #FF0000
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: clear
+
+# The blog button should not be removed.
+blog_button:
+    title: 博客主页
+
+# Navigation buttons in the front page.s
+nav:
+    - {title: 所有文章, description: archive, url: '/archive'}   
+    - {title: 标签, description: tags, url: '/tags'}      
+    - {title: 关于我, description: about, url: '/about'}      
+    
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 20
+paginate_path: "page/:num/"
+
+
