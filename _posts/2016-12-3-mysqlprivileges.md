@@ -20,7 +20,7 @@ mysql -u root -p"youpassword" 
 进行授权操作：
 
 ``` 
-mysql>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'youpassword' WITH GRANT OPTION;;
+mysql>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'youpassword' WITH GRANT OPTION;
 ``` 
 
 重载授权表： 
@@ -39,7 +39,7 @@ exit
 
 在本机先使用root用户登录mysql：
 
-`` 
+``` 
 mysql -u root -p"youpassword" 
 ``` 
 
@@ -59,7 +59,7 @@ FLUSH PRIVILEGES;
 
 ``` 
 exit
-`` 
+``` 
 
 ### 三、允许root用户特定的IP进行远程登录，并具有所有库特定操作权限
 
