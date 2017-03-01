@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mysql安全性,本地及远程录连接操作方法
+title:  Mysql安全性,本地及远程录连接操作方法
 date: 2016-12-3
 tags: Mysql   
 ---
