@@ -1884,9 +1884,9 @@ $ sort quarter_end.txt > quarter.sorted && lp quarter.sorted
 ```
 
 
-### 6.2 使用||
+### 6.2 使用`||`
 
-使用||的一般形式为：
+使用`||`的一般形式为：
 
 ```
 命令1 || 命令2
