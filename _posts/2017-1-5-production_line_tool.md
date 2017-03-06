@@ -27,7 +27,7 @@ tags: Windows工程代码
 
 生成后运行图
 
-![](/images/posts/line_tool/3.png)
+![](/images/posts/line_tool/3.jpg)
 
 ### 可以烧录DA14580 DA14581 DA14582 DA14681，类似小米手环中的蓝牙芯片.
 
