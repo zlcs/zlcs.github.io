@@ -1,0 +1,25 @@
+环境：
+win10_64 上测试完美运行
+数据库：sql server 2008 r2
+附加：database目录的5个 数据库
+新建一个数据库登录名：
+账号：2sa  密码：2sa
+加密后的密码：411253
+给5个数据库db_owner权限
+新建账户在：rom_account 表 dbo.playeraccount
+服务端运行：
+Realm_01_Common目录 1_rom.bat
+Realm_01_Service目录 2_rom.bat
+Realm_01_Zone目录 3_rom.bat
+内存够大，可以把Zone目录的4和5也运行了..建议只运行3！
+客户端运行：
+直接运行启动客户端 - 127.0.0.1
+这个参数在客户端的GameMain.cpp的608行修改
+测试账号:
+lidaye
+123456
+lidaye123456
+
+
+lidaye46658218
+enjoy！
