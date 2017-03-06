@@ -25,7 +25,7 @@ tags: Windows工程代码
 
 ![](/images/posts/line_tool/2.png)
 
-### 编译看的库 Ni.DAQmx库 Ni.visa库 vld内存泄漏检测库
+### 编译需要的库 Ni.DAQmx库 Ni.visa库 vld内存泄漏检测库
 
 生成后运行图
 
