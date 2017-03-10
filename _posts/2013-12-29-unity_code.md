@@ -16,11 +16,12 @@ tags: Windows工程代码 引擎
 
 ### 运行环境
 
-环境，需要安装：
+环境：
 
 ``` 
-Pc Mac Android 操作系统
-Visual Studio 2010 Sp1 编译生成
+Pc Mac Ios Android 支持系统环境
+Visual Studio 2010 Sp1 windows编译生成
+Xcode mac编译生成
 ``` 
 
 ### u3d_42f目录结构
