@@ -7,6 +7,10 @@ title: 关于我
 <p>
 iOSApp 手游 软件工程探索者 独立游戏制作人.
 <p>
+<p>
+<p>
+<p>
+<p>
 爱好整理各类代码工程，研究c++及python.
 <p>
 善用Linux系统,熟悉shell，及MacOSX开发环境.
