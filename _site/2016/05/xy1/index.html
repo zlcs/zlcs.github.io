@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>《西游类主题回合制Linux服务端》第一部分 从代码到运行</title>
+  <meta name="description" content="介绍">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="《西游类主题回合制Linux服务端》第一部分 从代码到运行">
+  <meta name="twitter:description" content="介绍">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="《西游类主题回合制Linux服务端》第一部分 从代码到运行">
+  <meta property="og:description" content="介绍">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2016/05/xy1/">
+  <link rel="alternate" type="application/rss+xml" title="Lyon" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="lyon" />
+
+<!-- 站点统计 -->
+  <script 
+  async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>  
+
+<!-- 百度统计 -->
+  
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ab69018b495da982a7a7eab9599eead4";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于我
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 Lyon 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                Lyon
+                            
+                        </h2>
+                        <p>
+                           
+                                iOS / 探索者
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for Lyon" class="blog-button">Lyon</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">个人博客</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">授人以鱼，亦授人以渔.</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于我</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">《西游类主题回合制Linux服务端》第一部分 从代码到运行</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2016-05-24 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2016-05-24</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h3 id="介绍">介绍</h3>
+
+<p>西游主题类的回合制端游的代码,Linux工程.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>同一代码两个实现工程,服务端可选集群,本文选不集群.
+主要逻辑实现采用python,python版本2.5.4.
+python的mysqldb模块.
+数据库采用mysql5.1.
+gcc g++版本4.1.2.
+这里使用的系统环境是centos release 5.8(final).
+</code></pre></div></div>
+
+<p>客户端引擎工程是网易的Neox,Neox 3d及工具已实现,看引擎代码可能会有Neox2d版本.
+此引擎工程年代属于2012年左右,未实现跨平台,看代码类似阴阳师引擎,重构现有引擎代码可实现跨平台.</p>
+
+<h3 id="本文章分两部分">本文章分两部分</h3>
+
+<p><strong>第一部分 简述从代码到运行</strong></p>
+
+<p><strong>第二部分 详解服务端代码分析 架构详解</strong></p>
+
+<p>这是目前见过最好的回合制服务器工程，Neox引擎架构分析,单独写文章.</p>
+
+<h3 id="第一部分简述运行">第一部分简述运行</h3>
+
+<p>简述步骤</p>
+
+<h3 id="网络">网络</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ping www.baidu.com
+ping 192.168.1.1
+vi /etc/resolv.conf
+</code></pre></div></div>
+
+<h3 id="yum及环境">yum及环境</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /usr/bin/yum
+yum update
+yum search mysql-devel
+yum install mysql-devel.x86_64 
+yum install -y mysql-server mysql-devel
+yum install zlib-devel
+yum install zlib1g-devel
+install g++
+install gcc-c++
+</code></pre></div></div>
+
+<h3 id="python环境">python环境</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python
+python --version
+rm -f /usr/bin/python  
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/
+tar zxvf server.tar.gz 
+mv server server2
+cd server2/3rdparty/
+tar jxf Python-2.5.4.tar.bz2
+ls -l
+cd Python-2.5.4
+./configure --enable-shared
+make
+make install
+ln -s /usr/local/bin/python2.5 /usr/bin/python 
+ldd /usr/local/bin/python
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uname -a
+find / -name libpython2.5.so.1.0
+ln -s /usr/local/lib/libpython2.5.so.1.0 /lib64/libpython2.5.so.1.0
+//sh setuptools-0.6c11-py2.5.egg 
+</code></pre></div></div>
+
+<h3 id="python模块环境">python模块环境</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar zxvf MySQL-python-1.2.3c1.tar.gz 
+cd MySQL-python-1.2.3c1
+python setup.py build
+python setup.py install
+python
+import MySQLdb 
+</code></pre></div></div>
+
+<h3 id="make">make</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/server2/server/
+make clean
+make 
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find / -name mysql.h
+ln -s /usr/include/mysql/ /usr/local/include/mysql
+make
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi makefile 
+ln -s /usr/lib/mysql /usr/local/lib/mysql
+ln -s /usr/lib/mysql /lib64/mysql
+make
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi makefile 
+find / -name libmysqlclient.so.15.0.0
+ln -s /usr/lib/mysql/libmysqlclient.so.15.0.0 /lib64/mysql/libmysqlclient.so.15.0.0
+cd /usr/lib64/mysql/
+file libmysqlclient.so.15.0.0
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/server2/server/
+vi makefile 
+make
+</code></pre></div></div>
+<p><img src="/images/posts/xy/1.png" alt="" /></p>
+
+<h3 id="导入mysql数据库脚本">导入mysql数据库脚本</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u root -p sj_db&lt;sj_db.sql 
+</code></pre></div></div>
+
+<h3 id="修改conf运行">修改conf运行</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi game_serv.conf 
+./game_serv 
+</code></pre></div></div>
+
+<p><img src="/images/posts/xy/2.png" alt="" /></p>
+
+<p><img src="/images/posts/xy/3.png" alt="" /></p>
+
+<h3 id="运行ok">运行ok</h3>
+
+<h3 id="闲谈">闲谈：</h3>
+<blockquote>
+  <ul>
+    <li>Python的服务端应用，推测网易回合制游戏的服务端；</li>
+    <li>无论二次开发还是学习，都是非常好的示例！</li>
+  </ul>
+</blockquote>
+
+<h3 id="需要技术支持参考学习的同学加群m我">需要技术支持，参考学习的同学，加群M我！</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>游戏讨论研究群：46658218
+IOS APP及游戏开发1群：275559010
+IOS APP及游戏开发2群：255153512
+</code></pre></div></div>
+
+<h3 id="本文只是简述详细讨论可以联系我资料仅供学习参考切勿用于商业用途">本文只是简述，详细讨论可以联系我，资料仅供学习参考，切勿用于商业用途！</h3>
+
+
+
+  </section>
+</article>
+
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2016/05/story1/" data-toggle="tooltip" data-placement="top" title="讲故事一">上一篇：  <span>讲故事一</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2016/05/python1/" data-toggle="tooltip" data-placement="top" title="Python编码规范">下一篇：  <span>Python编码规范</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div class="ds-thread" data-thread-key="/2016/05/xy1/" data-title="《西游类主题回合制Linux服务端》第一部分 从代码到运行" data-url="http://localhost:4000/2016/05/xy1/"></div>
+
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"Lyon"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/5485975878" title="@5485975878 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="mailto:275559010@qq.com" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; Lyon 2017 
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+  </body>
+
+</html>

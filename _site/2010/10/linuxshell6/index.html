@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>LINUX SHELL编程笔记 附录 常用shell命令</title>
+  <meta name="description" content="basename">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LINUX SHELL编程笔记 附录 常用shell命令">
+  <meta name="twitter:description" content="basename">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="LINUX SHELL编程笔记 附录 常用shell命令">
+  <meta property="og:description" content="basename">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2010/10/linuxshell6/">
+  <link rel="alternate" type="application/rss+xml" title="Lyon" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="lyon" />
+
+<!-- 站点统计 -->
+  <script 
+  async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>  
+
+<!-- 百度统计 -->
+  
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ab69018b495da982a7a7eab9599eead4";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于我
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 Lyon 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                Lyon
+                            
+                        </h2>
+                        <p>
+                           
+                                iOS / 探索者
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for Lyon" class="blog-button">Lyon</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">个人博客</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">授人以鱼，亦授人以渔.</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于我</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">LINUX SHELL编程笔记 附录 常用shell命令</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2010-10-06 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2010-10-06</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h3 id="basename">basename</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>basename path
+</code></pre></div></div>
+
+<p>basename命令能够从路径中分离出文件名。通常用于shell脚本中，请看下面的例子：
+如果上面的语句是脚本myscript中的一部分，那么它的输出应为：
+myscript: give me a file
+其中，$ 0是一个包含当前脚本全路径的特殊变量。</p>
+
+<h3 id="cat">cat</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat options files
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-v：显示控制字符。
+</code></pre></div></div>
+
+<p>cat是最常用的文本文件显示命令。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat myfile
+</code></pre></div></div>
+
+<p>上面的命令用于显示myfile文件。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat myfile myfile2 &gt;&gt;hold_file
+</code></pre></div></div>
+
+<p>上面的命令把两个文件(myfile和myfile2)合并到holdfile中。
+在脚本中cat命令还可以用于读入文件。</p>
+
+<h3 id="compress">compress</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>compress options files
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-v：显示压缩结果。
+</code></pre></div></div>
+
+<p>compress命令可以用来压缩文件。压缩后的文件名具有‘ . Z’后缀。还可以使用该命令解压文件。</p>
+
+<h3 id="cp">cp</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp options file1 file2
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-i：在覆盖文件之前提示用户，由用户确认。
+-p：保留权限模式和更改时间。
+-r：拷贝相应的目录及其子目录。
+</code></pre></div></div>
+
+<p>要将文件myfile拷贝到myfile1.bak，使用：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cp myfile1 myfile1.bak
+</code></pre></div></div>
+
+<p>要将文件get.prd从/usr/local/sybin目录拷贝到/usr/local/bin目录，使用：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cp /usr/local/sybin/get.prd /usr/local/bin
+</code></pre></div></div>
+
+<p>要将/logs目录下的所有文件及子目录拷贝到/hold/logs目录中，使用：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cp -r /logs /hold/logs
+</code></pre></div></div>
+
+<h3 id="diff">diff</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff options file1 file2
+</span></code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-c：按照标准格式输出(见下面的例子)。
+-I：忽略大小写。
+</code></pre></div></div>
+
+<p>我们使用comm命令中的例子，diff命令将显示两个文件中不一致的行。
+diff命令显示出两个文件中的第2行和第3行，它们的第3列不一致。</p>
+
+<h3 id="dircmp">dircmp</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dircmp options directory1 directory2
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-s：不显示相同的文件。
+</code></pre></div></div>
+
+<p>dircmp命令与diff命令十分相似—它比较并显示两个目录中的不同。</p>
+
+<h3 id="dirname">dirname</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dirname pathname
+</code></pre></div></div>
+
+<p>该目录正好和basename相反，它返回路径部分：</p>
+
+<h3 id="du">du</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>du options directory
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-a：显示每个文件的大小，不仅是整个目录所占用的空间。
+-s：只显示总计。
+</code></pre></div></div>
+
+<p>du显示的磁盘空间占用是以512字节的块来表示的。它主要用于显示目录所占用的空间。</p>
+
+<h3 id="file">file</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>file filename
+</code></pre></div></div>
+
+<p>该命令用来确定文件的类型。</p>
+
+<h3 id="fuser">fuser</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fuser options file
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-k：杀死所有访问该文件或文件系统的进程。
+-u：显示访问该文件或文件系统的所有进程。
+</code></pre></div></div>
+
+<p>fuser命令可以显示访问某个文件或文件系统的所有进程。在有些系统上-u和-m选项可以互换。还可以在if语句中使用fuser命令。
+要列出设备/dev/hda5上的所有活动进程，使用：要杀死设备/dev/hda5上的所有进程，使用：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ fuser -k /dev/hda5
+</code></pre></div></div>
+
+<p>要查看docpart文件是否被打开，有哪些进程在使用，可用：
+有些系统上的fuser命令能够在列表中显示用户登录ID。如果你的系统不具有这样的功能，可以按照fuser命令输出中末尾含有‘ e’的数字在ps -ef或ps xa命令的输出中用grep命令查找
+相应的用户登录ID。</p>
+
+<h3 id="head">head</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head -number files
+</code></pre></div></div>
+
+<p>head命令可以显示相应文件的前10行。如果希望指定显示的行数，可以使用-number选项。
+例如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ head -1 myfile
+</code></pre></div></div>
+
+<p>只显示文件的第一行，而</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ head -30 logfile |more
+</code></pre></div></div>
+
+<p>则显示logfile文件的前30行。</p>
+
+<h3 id="logname">logname</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>logname
+</code></pre></div></div>
+
+<p>该命令可以显示当前所使用的登录用户名：</p>
+
+<h3 id="mkdir">mkdir</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir options directory
+</code></pre></div></div>
+
+<p>选项：
+-m：在创建目录时按照该选项的值设置访问权限。
+上述命令创建了一个名为HOLDAREA的目录。</p>
+
+<h3 id="more">more</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>more options files
+</code></pre></div></div>
+
+<p>该命令和page及pg命令的功能相似，都能够分屏显示文件内容。
+选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-c：不滚屏，而是通过覆盖来换页。
+-d：在分页处显示提示。
+-n：每屏显示n行。
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ more /etc/passwd
+</code></pre></div></div>
+
+<p>上面的命令显示passwd文件</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat logfile |more
+</code></pre></div></div>
+
+<p>上面的命令显示logfile文件。</p>
+
+<h3 id="nl">nl</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nl options file
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-I：行号每次增加n；缺省为1。
+-p：在新的一页不重新计数。
+</code></pre></div></div>
+
+<p>nl命令可用于在文件中列行号，在打印源代码或列日志文件时很有用。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nl myscript
+</code></pre></div></div>
+
+<p>上面的命令将列出myscript文件的行号。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nl myscript &gt;hold_file
+</code></pre></div></div>
+
+<p>则将上面命令的输出重定向到holdfile文件中。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nl myscript | lpr
+</code></pre></div></div>
+
+<p>将上面命令的结果重定向到打印机。</p>
+
+<h3 id="printf">printf</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>printf format arguments
+</code></pre></div></div>
+
+<p>该命令有点类似于awk命令的printf函数，它将格式化文本送至标准输出。
+其中，格式符format包含三种类型的项，这里我们只讨论格式符：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%[- +]m.nx
+</code></pre></div></div>
+
+<p>其中横杠-为从行首算起的起始位置。一般说来m表示域的宽度而n表示域的最大宽度。
+‘%’后面可跟下列格式字符：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>s：字符串。
+c：字符。
+d：数字。
+x：16进制数。
+o：10进制数。
+</code></pre></div></div>
+
+<p>printf命令本身并不会产生换行符，必须使用转义字符来实现这样的功能。下面是最常用
+的转义字符：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\a：响铃。
+\b：退格。
+\r：回车。
+\f：换页。
+\n：换行。
+\t：跳格。
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ printf "Howzat!\n"
+Howzat!
+</code></pre></div></div>
+
+<p>上面的命令输出了一个字符串，使用\n来换行。
+上面的命令把1 6进制值转换为ASCII字符+。
+上面的命令从左起第10个字符的位置开始显示字符串。</p>
+
+<h3 id="pwd">pwd</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pwd
+</code></pre></div></div>
+
+<p>显示当前的工作目录，可以用：
+在上面的脚本中，使用了命令置换来获得当前目录。</p>
+
+<h3 id="rm">rm</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm options files
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-i：在删除文件之前给出提示(安全模式)。
+-r：删除目录。
+</code></pre></div></div>
+
+<p>rm命令能够删除文件或目录。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf directory
+</code></pre></div></div>
+
+<h3 id="rmdir">rmdir</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rmdir options directory
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-p：如果相应的目录为空目录，则删除该目录。
+</code></pre></div></div>
+
+<h3 id="script">script</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>script option file
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-a：将输出附加在文件末尾。
+</code></pre></div></div>
+
+<p>可以使用script命令记录当前会话。只要在命令行键入该命令即可。该命令在你退出当前会话时结束。它可以将你的输入记录下来并附加到一个文件末尾。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ script mylogin
+</code></pre></div></div>
+
+<p>将会启动script命令并将所有会话内容记录在mylogin文件中。</p>
+
+<h3 id="shutdown">shutdown</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shutdown
+</code></pre></div></div>
+
+<p>该命令将关闭系统。很多系统供应商都有自己特定的命令变体。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ shutdown now
+</code></pre></div></div>
+
+<p>上面的命令将会立即关机。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ shutdown -g60 -I6 -y
+</code></pre></div></div>
+
+<p>上面的命令将会在60秒之后关机，然后重新启动系统。</p>
+
+<h3 id="sleep">sleep</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sleep number
+</code></pre></div></div>
+
+<p>该命令使系统等待相应的秒数。例如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sleep 10
+</code></pre></div></div>
+
+<p>意味着系统在10秒钟之内不进行任何操作。</p>
+
+<h3 id="strings">strings</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>strings filename
+</code></pre></div></div>
+
+<p>该命令可以看二进制文件中所包含的文本。</p>
+
+<h3 id="touch">touch</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch options filename
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-t MMDDhhmm 创建一个具有相应月、日、时分时间戳的文件。
+</code></pre></div></div>
+
+<h3 id="tty">tty</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tty
+</code></pre></div></div>
+
+<p>可以使用tty来报告所连接的设备或终端。
+可以使用tty -s命令来确定脚本的标准输入。返回码为：
+0：终端。
+1：非终端。</p>
+
+<h3 id="uname">uname</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uname options
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-a：显示所有信息。
+-s：系统名。
+-v：只显示操作系统版本或其发布日期。
+</code></pre></div></div>
+
+<h3 id="uncompress">uncompress</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uncompress files
+</code></pre></div></div>
+
+<p>可以使用该命令来恢复压缩文件。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ uncompress myfile
+</code></pre></div></div>
+
+<p>上面的命令解压缩先前压缩的myfile文件。注意，在解压缩时不必给出.Z后缀。</p>
+
+<h3 id="wait">wait</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wait process ID
+</code></pre></div></div>
+
+<p>该命令可以用来等待进程号为process ID的进程或所有的后台进程结束后，再执行当前脚
+本。
+下面的命令等待进程号为1299的进程结束后再执行当前脚本：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wait 1299
+</code></pre></div></div>
+
+<p>下面的命令等待所有的后台进程结束后再执行当前脚本：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wait
+</code></pre></div></div>
+
+<h3 id="wc">wc</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wc options files
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-c：显示字符数。
+-l：显示行数。
+-w：显示单词数。
+</code></pre></div></div>
+
+<p>该命令能够统计文件中的字符数、单词数和行数。</p>
+
+<h3 id="whereis">whereis</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>whereis command_name
+</code></pre></div></div>
+
+<p>whereis命令能够给出系统命令的二进制文件及其在线手册的路径。</p>
+
+<h3 id="who">who</h3>
+
+<p>格式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>who options
+</code></pre></div></div>
+
+<p>选项：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-a：显示所有的结果。
+-r：显示当前的运行级别(在LINUX系统中应当使用runlevel命令)。
+-s：列出用户名及时间域。
+</code></pre></div></div>
+
+<p>whoami 显示执行该命令的用户名。这不是who命令的一个选项，可以单独应用。
+who命令可以显示当前有哪些用户登录到系统上。</p>
+
+
+  </section>
+</article>
+
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2010/10/linuxshell5/" data-toggle="tooltip" data-placement="top" title="LINUX SHELL编程笔记 第五部分  高级shell编程技巧">上一篇：  <span>LINUX SHELL编程笔记 第五部分  高级shell编程技巧</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2010/11/MFC/" data-toggle="tooltip" data-placement="top" title="MFC 6.0">下一篇：  <span>MFC 6.0</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div class="ds-thread" data-thread-key="/2010/10/linuxshell6/" data-title="LINUX SHELL编程笔记 附录 常用shell命令" data-url="http://localhost:4000/2010/10/linuxshell6/"></div>
+
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"Lyon"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/5485975878" title="@5485975878 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="mailto:275559010@qq.com" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; Lyon 2017 
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+  </body>
+
+</html>

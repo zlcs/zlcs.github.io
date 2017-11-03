@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>《将军令》-Windows从代码到运行</title>
+  <meta name="description" content="介绍">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="《将军令》-Windows从代码到运行">
+  <meta name="twitter:description" content="介绍">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="《将军令》-Windows从代码到运行">
+  <meta property="og:description" content="介绍">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2013/03/jjl/">
+  <link rel="alternate" type="application/rss+xml" title="Lyon" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="lyon" />
+
+<!-- 站点统计 -->
+  <script 
+  async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>  
+
+<!-- 百度统计 -->
+  
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ab69018b495da982a7a7eab9599eead4";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于我
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 Lyon 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                Lyon
+                            
+                        </h2>
+                        <p>
+                           
+                                iOS / 探索者
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for Lyon" class="blog-button">Lyon</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">个人博客</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">授人以鱼，亦授人以渔.</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于我</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">《将军令》-Windows从代码到运行</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2013-03-30 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2013-03-30</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h3 id="介绍">介绍</h3>
+
+<p>简介：</p>
+
+<p>产品名:《将军令》2D即时网游力作，国内首款被韩方主动引进的国产网游《将军令》在进行了为期一个月的封闭测试后，终于在今日开放了免激活机制，全面展开压力封测，让数万玩家体验恢宏国战带来的激情。</p>
+
+<p>服务端双数据库类型，比较罕见，是借鉴学习的好资料！</p>
+
+<p>此份包含客户端代码资源，服务端代码资源，这里简述一分钟客户端游戏图示，有代码疑问，技术问题都可以联系我.</p>
+
+<h3 id="运行环境">运行环境</h3>
+
+<p>环境，需要安装：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Win764位 操作系统
+数据库可选
+Visual Studio 2003 编译生成
+</code></pre></div></div>
+
+<h3 id="目录结构">目录结构</h3>
+
+<p>如图：</p>
+
+<p><img src="/images/posts/jjl/jjl-1.jpg" alt="" /></p>
+
+<h3 id="服务器项目结构">服务器项目结构</h3>
+
+<p>如图：</p>
+
+<p><img src="/images/posts/jjl/jjl-2jpg" alt="" /></p>
+
+<p><img src="/images/posts/jjl/jjl-3.jpg" alt="" /></p>
+
+<p><img src="/images/posts/jjl/jjl-4.jpg" alt="" /></p>
+
+<h3 id="客户端项目结构">客户端项目结构</h3>
+
+<p>如图：</p>
+
+<p><img src="/images/posts/jjl/jjl-5.jpg" alt="" /></p>
+
+<h3 id="服务端运行这里是全部服务端程序根据数据库类型">服务端运行，这里是全部服务端程序，根据数据库类型.</h3>
+
+<p>如图：</p>
+
+<p><img src="/images/posts/jjl/jjl-6.jpg" alt="" /></p>
+
+<h3 id="客户端运行">客户端运行</h3>
+
+<p>如图：</p>
+
+<p><img src="/images/posts/jjl/jjl-7.jpg" alt="" /></p>
+
+<p><img src="/images/posts/jjl/jjl-8.jpg" alt="" /></p>
+
+<p><img src="/images/posts/jjl/jjl-9.jpg" alt="" /></p>
+
+<p><img src="/images/posts/jjl/jjl-10.jpg" alt="" /></p>
+
+<h3 id="运行游戏">运行游戏</h3>
+
+<p>如图：</p>
+
+<p><img src="/images/posts/jjl/jjl-11.jpg" alt="" /></p>
+
+<p><img src="/images/posts/jjl/jjl-12.jpg" alt="" /></p>
+
+<p><img src="/images/posts/jjl/jjl-13.jpg" alt="" /></p>
+
+<p><img src="/images/posts/jjl/jjl-14.jpg" alt="" /></p>
+
+<p><img src="/images/posts/jjl/jjl-15.jpg" alt="" /></p>
+
+<h3 id="个人观点工具完整代码齐全数据库开发的典范例子">个人观点：工具完整，代码齐全，数据库开发的典范例子！</h3>
+
+<h3 id="需要完整代码资源技术支持参考学习的同学加群m我">需要完整代码资源，技术支持，参考学习的同学，加群M我！</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>游戏讨论研究群：46658218
+IOS APP及游戏开发1群：275559010
+IOS APP及游戏开发2群：255153512
+</code></pre></div></div>
+
+<h3 id="以上是windows平台教程本文只是简述详细讨论可以联系我资料仅供学习参考切勿用于商业用途">以上是Windows平台教程，本文只是简述，详细讨论可以联系我，资料仅供学习参考，切勿用于商业用途！</h3>
+
+
+  </section>
+</article>
+
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2012/12/rycs/" data-toggle="tooltip" data-placement="top" title="《日月传说》-Windows从代码到运行">上一篇：  <span>《日月传说》-Windows从代码到运行</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2013/05/im3/" data-toggle="tooltip" data-placement="top" title="《钢铁侠》-Windows从代码到运行">下一篇：  <span>《钢铁侠》-Windows从代码到运行</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div class="ds-thread" data-thread-key="/2013/03/jjl/" data-title="《将军令》-Windows从代码到运行" data-url="http://localhost:4000/2013/03/jjl/"></div>
+
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"Lyon"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/5485975878" title="@5485975878 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="mailto:275559010@qq.com" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; Lyon 2017 
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+  </body>
+
+</html>

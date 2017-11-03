@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lyon</title>
+    <description>授人以鱼，亦授人以渔.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 03 Nov 2017 17:14:33 +0800</pubDate>
+    <lastBuildDate>Fri, 03 Nov 2017 17:14:33 +0800</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>《太极熊猫》游戏物理引擎</title>
+        <description>&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
+
+&lt;p&gt;物理引擎&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  苏州蜗牛出品《太极熊猫》《九阴真经》游戏的物理引擎，已实现多平台ios，android，windows运行。
+
+ 引擎代码完整，注释详细到每段每句，年代跨越到07 08年，可知引擎已开发很久，
+
+ 真机适配iOS11,可运行，加载资源及引擎有一些问题，引擎工具不完整，此引擎可当作参考学习！
+
+ 看下引擎windows加载world的图片。。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;运行环境&quot;&gt;运行环境&lt;/h3&gt;
+
+&lt;p&gt;环境：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;引擎支持 ios android windows平台
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;引擎项目结构&quot;&gt;引擎项目结构&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;引擎加载运行&quot;&gt;引擎加载运行&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/8.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/9.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/10.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/11.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/12.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/13.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/14.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/15.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/16.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/snail/17.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;闲谈&quot;&gt;闲谈：&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;引擎代码完整，工具不完整，不建议二次开发，详细的代码注释，可以借鉴学习！&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;需要完整代码资源技术支持参考学习的同学加群m我&quot;&gt;需要完整代码资源，技术支持，参考学习的同学，加群M我！&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;游戏讨论研究群：46658218
+IOS APP及游戏开发1群：275559010
+IOS APP及游戏开发2群：255153512
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;本文只是简述详细讨论可以联系我资料仅供学习参考切勿用于商业用途&quot;&gt;本文只是简述，详细讨论可以联系我，资料仅供学习参考，切勿用于商业用途！&lt;/h3&gt;
+</description>
+        <pubDate>Sun, 10 Sep 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/09/snail/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/09/snail/</guid>
+        
+        <category>引擎</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>《大荒传奇》-Windows从代码到运行</title>
+        <description>&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
+
+&lt;p&gt;来自百科介绍:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  《大荒传奇》是由欢畅时代独家代理的一款集&quot;裸眼3D&quot;&quot;Q版/3D模式任意切换&quot;的大型角色扮演类网游，
+
+ 以独特的巫神变身和法宝掠阵三位一体战斗玩法，并植入MOBA玩法。故事的背景被架空置入上古的三皇五帝时期，
+
+ 那是一个蛮荒的时代，部族林立，战事连绵，人们不仅要面对恶劣的自然环境、凶猛的上古荒兽，
+
+ 还要面对部族之间为争夺领地、不同的阵营为各自的信仰而发起的大小战争。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;运行环境&quot;&gt;运行环境&lt;/h3&gt;
+
+&lt;p&gt;环境，需要安装：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Win764位 操作系统
+sql 2008 r2 数据库
+Visual Studio 2008 编译生成
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;目录结构&quot;&gt;目录结构&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;略&lt;/p&gt;
+
+&lt;h3 id=&quot;服务器项目结构&quot;&gt;服务器项目结构&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;略&lt;/p&gt;
+
+&lt;h3 id=&quot;引擎项目结构&quot;&gt;引擎项目结构&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;略&lt;/p&gt;
+
+&lt;h3 id=&quot;客户端项目结构&quot;&gt;客户端项目结构&lt;/h3&gt;
+
+&lt;p&gt;略&lt;/p&gt;
+
+&lt;h3 id=&quot;服务端运行&quot;&gt;服务端运行&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;略&lt;/p&gt;
+
+&lt;h3 id=&quot;客户端运行&quot;&gt;客户端运行&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;运行游戏&quot;&gt;运行游戏&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/8.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/11.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/12.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/dhcq/13.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;闲谈&quot;&gt;闲谈：&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;大型客户端网游，有WOW魔兽世界的风格;&lt;/li&gt;
+    &lt;li&gt;客户端 服务端代码完整，游戏物理引擎不完整，缺少对应的引擎游戏世界编辑器，同时缺少客户端 服务端配套工具；&lt;/li&gt;
+    &lt;li&gt;引擎是ogre改出的漫步者引擎，估计和网域游戏的《九界》一样引擎；&lt;/li&gt;
+    &lt;li&gt;游戏顺序，前面有《蛮荒》，然后岳览时代《大荒传奇》,岳览时代时开发此游戏成本评估2200W，后东谷科技有款类似的游戏《神仙与妖怪》；&lt;/li&gt;
+    &lt;li&gt;客户端 服务端 引擎代码全部调试通过，去除已知bug及崩溃点，引擎代码完整，工具不完整，不建议二次开发，服务端及客户端代码可以借鉴学习！&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;需要完整代码资源技术支持参考学习的同学加群m我&quot;&gt;需要完整代码资源，技术支持，参考学习的同学，加群M我！&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;游戏讨论研究群：46658218
+IOS APP及游戏开发1群：275559010
+IOS APP及游戏开发2群：255153512
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;以上是windows平台教程本文只是简述详细讨论可以联系我资料仅供学习参考切勿用于商业用途&quot;&gt;以上是Windows平台教程，本文只是简述，详细讨论可以联系我，资料仅供学习参考，切勿用于商业用途！&lt;/h3&gt;
+</description>
+        <pubDate>Sat, 12 Aug 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/08/dhcq/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/dhcq/</guid>
+        
+        <category>Windows工程代码</category>
+        
+        <category>客户端网游</category>
+        
+        <category>Ogre引擎</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>《战三国》手游代码工程</title>
+        <description>&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
+
+&lt;p&gt;一款三国类型手游，引擎为Cocos2dx已64位生成，可APK及iOS发布，可以借鉴学习。&lt;/p&gt;
+
+&lt;p&gt;服务端使用java及mysql数据库，客户端使用c++代码，全c++代码构造客户端，执行速度及效率非常高.&lt;/p&gt;
+
+&lt;p&gt;客户端因物理引擎跨平台，支持多个平台运行，同时代码效率高，服务端java有优点也有缺点.&lt;/p&gt;
+
+&lt;p&gt;经过几天的调试代码，客户端已实现android ios 及windos运行.&lt;/p&gt;
+
+&lt;p&gt;可二次开发，游戏性不比梦幻西游低，游戏玩法特烧钱，此产品由完美世界出品.&lt;/p&gt;
+
+&lt;p&gt;此游戏的评测及游戏系统分析不详述.&lt;/p&gt;
+
+&lt;h3 id=&quot;xcode加载后项目结构&quot;&gt;xcode加载后项目结构&lt;/h3&gt;
+
+&lt;p&gt;如图 略&lt;/p&gt;
+
+&lt;h3 id=&quot;eclipse加载后运行图&quot;&gt;eclipse加载后运行图&lt;/h3&gt;
+
+&lt;p&gt;如图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;运行图&quot;&gt;运行图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg18.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg8.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg9.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg10.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg11.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg12.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg13.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg14.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg15.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/zjsg/zjsg16.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;个人观点二次开发游戏性不比梦幻西游低&quot;&gt;个人观点：二次开发，游戏性不比梦幻西游低!!!&lt;/h3&gt;
+
+&lt;h3 id=&quot;需要完整代码资源技术支持参考学习的同学加群m我&quot;&gt;需要完整代码资源，技术支持，参考学习的同学，加群M我！&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;游戏讨论研究群：46658218
+IOS APP及游戏开发1群：275559010
+IOS APP及游戏开发2群：255153512
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;以上是windows平台教程本文只是简述详细讨论可以联系我资料仅供学习参考切勿用于商业用途&quot;&gt;以上是Windows平台教程，本文只是简述，详细讨论可以联系我，资料仅供学习参考，切勿用于商业用途！&lt;/h3&gt;
+</description>
+        <pubDate>Thu, 23 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/03/zjsg/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/zjsg/</guid>
+        
+        <category>手游</category>
+        
+        <category>Cocos2dx工程代码</category>
+        
+        <category>iOSApp</category>
+        
+        <category>java</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>《皇家守卫》手游代码工程</title>
+        <description>&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
+
+&lt;p&gt;一款塔防手游,引擎为Cocos2dx 3系列已64位生成,可APK及iOS发布,可以借鉴学习.&lt;/p&gt;
+
+&lt;p&gt;客户端码由c++编写，因引擎跨平台，支持多个平台运行.&lt;/p&gt;
+
+&lt;p&gt;塔防类游戏性观点独特.&lt;/p&gt;
+
+&lt;h3 id=&quot;xcode加载后项目结构&quot;&gt;xcode加载后项目结构&lt;/h3&gt;
+
+&lt;p&gt;如图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/tower/tower1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;运行图&quot;&gt;运行图&lt;/h3&gt;
+
+&lt;p&gt;如图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/tower/tower2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/tower/tower3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/tower/tower4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/tower/tower5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/tower/tower6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;个人观点工具完整代码齐全塔防类游戏性观点独特可二次开发&quot;&gt;个人观点：工具完整，代码齐全，塔防类游戏性观点独特，可二次开发！&lt;/h3&gt;
+
+&lt;h3 id=&quot;需要完整代码资源技术支持参考学习的同学加群m我&quot;&gt;需要完整代码资源，技术支持，参考学习的同学，加群M我！&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;游戏讨论研究群：46658218
+IOS APP及游戏开发1群：275559010
+IOS APP及游戏开发2群：255153512
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;以上是windows平台教程本文只是简述详细讨论可以联系我资料仅供学习参考切勿用于商业用途&quot;&gt;以上是Windows平台教程，本文只是简述，详细讨论可以联系我，资料仅供学习参考，切勿用于商业用途！&lt;/h3&gt;
+</description>
+        <pubDate>Fri, 10 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/03/tower/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/tower/</guid>
+        
+        <category>Cocos2dx工程代码</category>
+        
+        <category>iOS</category>
+        
+        <category>App</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>《土豪金麻将》iOS客户端代码</title>
+        <description>&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
+
+&lt;p&gt;一款房卡麻将手游，引擎为Cocos2dx 2.2.6已64位生成，可APK及iOS发布，可以借鉴学习。&lt;/p&gt;
+
+&lt;p&gt;客户端码由c++编写，因引擎跨平台，支持多个平台运行。&lt;/p&gt;
+
+&lt;p&gt;服务端程序运行于windows，数据库为sqlserver&lt;/p&gt;
+
+&lt;h3 id=&quot;xcode加载后项目结构&quot;&gt;xcode加载后项目结构&lt;/h3&gt;
+&lt;p&gt;如图&lt;/p&gt;
+
+&lt;h3 id=&quot;运行图&quot;&gt;运行图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/thj/thj1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 20 Feb 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/02/thj/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/02/thj/</guid>
+        
+        <category>Cocos2dx工程代码</category>
+        
+        <category>iOS</category>
+        
+        <category>App</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>在线烧录Tool分析《production_line_tool》</title>
+        <description>&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
+
+&lt;p&gt;蓝牙烧录芯片的全套功能性工具代码，一般常见是直接烧录u盘芯片一类的工具，此工具代码借鉴学习。&lt;/p&gt;
+
+&lt;p&gt;代码由c++ 及c编写，运行windows平台。&lt;/p&gt;
+
+&lt;p&gt;项目年份2016，支持蓝牙芯片产品年代2016！&lt;/p&gt;
+
+&lt;h3 id=&quot;解压工程目录结构&quot;&gt;解压工程目录结构&lt;/h3&gt;
+
+&lt;p&gt;如图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/line_tool/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;vs加载后项目结构&quot;&gt;vs加载后项目结构&lt;/h3&gt;
+
+&lt;p&gt;如图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/line_tool/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;编译需要的库-nidaqmx库-nivisa库-vld内存泄漏检测库&quot;&gt;编译需要的库 Ni.DAQmx库 Ni.visa库 vld内存泄漏检测库&lt;/h3&gt;
+
+&lt;p&gt;生成后运行图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/line_tool/3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;可以烧录da14580-da14581-da14582-da14681类似小米手环中的蓝牙芯片&quot;&gt;可以烧录DA14580 DA14581 DA14582 DA14681，类似小米手环中的蓝牙芯片.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/line_tool/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;不提供代码仅技术研究&quot;&gt;不提供代码，仅技术研究！&lt;/h3&gt;
+
+</description>
+        <pubDate>Thu, 05 Jan 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/01/production_line_tool/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/production_line_tool/</guid>
+        
+        <category>Windows工程代码</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>《智能家居》iOS App真机调试-发版一</title>
+        <description>&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
+
+&lt;p&gt;这里是App发版一，产品使用短信SDK接入注册登陆，本地逻辑齐全，服务端使用莹石云SDK,&lt;/p&gt;
+
+&lt;p&gt;代码及功能完整，音乐为外接服务SDK,带有二维码扫描，云对讲，网络状态切换，智能家居摄像头，云台，安防，智能门锁，门磁，猫眼摄像头，小智智能机器人 音乐盒子，广告策略……很多功能&lt;/p&gt;
+
+&lt;p&gt;太多想到没想到的功能全部包含，此份估计属于商业代码，开发公司为第三女神，看代码及项目分析估计可能是莹石硬件或软件提供商，同时可能也是360小智机器人的技术或产品提供商.&lt;/p&gt;
+
+&lt;p&gt;这里没有服务端做测试..有服务端整套解决方案智能家居云端及控制端就齐全了.&lt;/p&gt;
+
+&lt;p&gt;工程近500+源码文件，同时资源图齐全，智能家居各种功能包含，可直接二次开发！&lt;/p&gt;
+
+&lt;h3 id=&quot;xcode加载后项目结构&quot;&gt;xcode加载后项目结构&lt;/h3&gt;
+
+&lt;p&gt;如图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/home1/home-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;运行图&quot;&gt;运行图&lt;/h3&gt;
+
+&lt;p&gt;返回手机开门的api在服务端，本地只是数据业务逻辑，远程判断及值参数返回.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/home1/home-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/home1/home-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/home1/home-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/home1/home-5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;个人观点功能性完整代码齐全智能家居开发的实例直接可以投入产品线使用&quot;&gt;个人观点：功能性完整，代码齐全，智能家居开发的实例，直接可以投入产品线使用！&lt;/h3&gt;
+</description>
+        <pubDate>Thu, 08 Dec 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/12/home1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/12/home1/</guid>
+        
+        <category>智能家居</category>
+        
+        <category>iOS</category>
+        
+        <category>App</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mysql安全性 本地及远程录连接操作方法</title>
+        <description>&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
+
+&lt;p&gt;Mysql安全性 本地及远程录连接操作方法&lt;/p&gt;
+
+&lt;h3 id=&quot;一允许root用户在任何地方进行远程登录并具有所有库任何操作权限&quot;&gt;一、允许root用户在任何地方进行远程登录，并具有所有库任何操作权限&lt;/h3&gt;
+
+&lt;p&gt;本机使用root用户登录mysql：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql -u root -p&quot;youpassword&quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;进行授权操作：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql&amp;gt;GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'youpassword' WITH GRANT OPTION;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;重载授权表：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FLUSH PRIVILEGES;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;退出mysql数据库：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;二允许root用户特定的ip远程登录并具有所有库任何操作权限&quot;&gt;二、允许root用户特定的IP远程登录，并具有所有库任何操作权限&lt;/h3&gt;
+
+&lt;p&gt;在本机先使用root用户登录mysql：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql -u root -p&quot;youpassword&quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;进行授权操作：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GRANT ALL PRIVILEGES ON *.* TO root@&quot;192.168.1.2&quot; IDENTIFIED BY &quot;youpassword&quot; WITH GRANT OPTION;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;重载授权表：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FLUSH PRIVILEGES;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;退出mysql数据库：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;三允许root用户特定的ip进行远程登录并具有所有库特定操作权限&quot;&gt;三、允许root用户特定的IP进行远程登录，并具有所有库特定操作权限&lt;/h3&gt;
+
+&lt;p&gt;在本机先使用root用户登录mysql：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql -u root -p&quot;youpassword&quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;进行授权操作：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GRANT select，insert，update，delete ON *.* TO root@&quot;192.168.1.2&quot; IDENTIFIED BY &quot;youpassword&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;重载授权表：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FLUSH PRIVILEGES;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;退出mysql数据库：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;四删除用户授权需要使用revoke命令&quot;&gt;四、删除用户授权，需要使用REVOKE命令&lt;/h3&gt;
+
+&lt;p&gt;命令：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;REVOKE privileges ON 数据库[.表名] FROM user-name;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在本机先使用root用户登录mysql：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql -u root -p&quot;youpassword&quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;进行授权操作：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GRANT select，insert，update，delete ON TEST-DB TO test-user@&quot;192.168.1.2&quot; IDENTIFIED BY &quot;youpassword&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;再进行删除授权操作：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;REVOKE all on TEST-DB from test-user;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;操作只是清除了用户对于TEST-DB的相关授权权限，但是这个“test-user”这个用户还是存在.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;最后从用户表内清除用户：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DELETE FROM user WHERE user=&quot;test-user&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;重载授权表：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FLUSH PRIVILEGES;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;退出mysql数据库：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;五mysql权限详细分类&quot;&gt;五、MYSQL权限详细分类&lt;/h3&gt;
+
+&lt;p&gt;全局管理权限： &lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FILE: 在MySQL服务器上读写文件。 
+PROCESS: 显示或杀死属于其它用户的服务线程。 
+RELOAD: 重载访问控制表，刷新日志等。 
+SHUTDOWN: 关闭MySQL服务。
+数据库/数据表/数据列权限： 
+ALTER: 修改已存在的数据表(例如增加/删除列)和索引。 
+CREATE: 建立新的数据库或数据表。 
+DELETE: 删除表的记录。 
+DROP: 删除数据表或数据库。 
+INDEX: 建立或删除索引。 
+INSERT: 增加表的记录。 
+SELECT: 显示/搜索表的记录。 
+UPDATE: 修改表中已存在的记录。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;特别的权限： &lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ALL: 允许做任何事(和root一样)。 
+USAGE: 只允许登录--其它什么也不允许做。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sat, 03 Dec 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/12/mysqlprivileges/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/12/mysqlprivileges/</guid>
+        
+        <category>Mysql</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>《魔法之门》-Windows从代码到运行</title>
+        <description>&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
+
+&lt;p&gt;来自百科介绍:&lt;/p&gt;
+
+&lt;p&gt;产品名《魔法之门》是一款大型西方魔幻类MMORPG，是《魔幻盛典》最新发布的大型资料片。
+游戏拥有经典的史诗剧情、大气唯美的画面、丰富新颖的特色系统。 
+独创的“造型工坊、魔幻宝盒、双职技能”三大自定义概念系统彻底颠覆了传统MMORPG，为玩家包办一切的游戏模式，大大满足了玩家对于游戏装备、属性、造型、技能搭配的需求。&lt;/p&gt;
+
+&lt;p&gt;此份包含客户端代码资源，服务端代码资源，这里简述一分钟客户端游戏图示，有代码疑问，技术问题都可以联系我.&lt;/p&gt;
+
+&lt;h3 id=&quot;运行环境&quot;&gt;运行环境&lt;/h3&gt;
+
+&lt;p&gt;环境，需要安装：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Win764位 操作系统
+sql 2008 r2 数据库
+Visual Studio 2010 编译生成
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;目录结构&quot;&gt;目录结构&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;服务器项目结构&quot;&gt;服务器项目结构&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;引擎项目结构&quot;&gt;引擎项目结构&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;客户端项目结构&quot;&gt;客户端项目结构&lt;/h3&gt;
+
+&lt;p&gt;运行启动客户端参数“ - 127.0.0.1”
+参数在客户端的GameMain.cpp的608行修改.&lt;/p&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;服务端运行&quot;&gt;服务端运行&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;客户端运行&quot;&gt;客户端运行&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-8.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-9.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;运行游戏&quot;&gt;运行游戏&lt;/h3&gt;
+
+&lt;p&gt;如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-10.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-11.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-12.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-13.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-14.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/xor/xor-15.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;个人观点大型客户端网游有wow魔兽世界的风格&quot;&gt;个人观点：大型客户端网游，有WOW魔兽世界的风格.&lt;/h3&gt;
+
+&lt;h3 id=&quot;需要完整代码资源技术支持参考学习的同学加群m我&quot;&gt;需要完整代码资源，技术支持，参考学习的同学，加群M我！&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;游戏讨论研究群：46658218
+IOS APP及游戏开发1群：275559010
+IOS APP及游戏开发2群：255153512
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;以上是windows平台教程本文只是简述详细讨论可以联系我资料仅供学习参考切勿用于商业用途&quot;&gt;以上是Windows平台教程，本文只是简述，详细讨论可以联系我，资料仅供学习参考，切勿用于商业用途！&lt;/h3&gt;
+</description>
+        <pubDate>Sun, 06 Nov 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/11/xor/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/11/xor/</guid>
+        
+        <category>Windows工程代码</category>
+        
+        <category>客户端网游</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>《十二生肖完整服务端资源及代码》100%进游戏收藏版!</title>
+        <description>&lt;h3 id=&quot;介绍&quot;&gt;介绍&lt;/h3&gt;
+
+&lt;p&gt;十二生肖完整服务端资源及代码,100%进游戏收藏版!
+这套代码及资源已调试整理属于完整一套！
+注：服务端代码 客户端代码 工具代码完整，服务器及客户端资源完整，代码中注释lyon的是我修改过的地方!百分百进游戏!&lt;/p&gt;
+
+&lt;h3 id=&quot;已发布在soke网&quot;&gt;已发布在soke网&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://www.soke163.com/thread-80705-1-1.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;代码我已经调试通过拿到代码的同学按步骤进游戏&quot;&gt;代码我已经调试通过，拿到代码的同学按步骤进游戏！&lt;/h3&gt;
+
+&lt;h3 id=&quot;我们开始吧&quot;&gt;我们开始吧！&lt;/h3&gt;
+
+&lt;p&gt;环境，需要安装：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Win764位 操作系统
+Mysql  数据库
+Navicat Premium mysql  数据库管理
+Visual Studio 2008  服务端编译生成
+Visual Studio 2010  用于客户端编译生成
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;本机环境有全系列Visual Studio，有Visual Studio 2010的同学也可以用2010来编译服务端.&lt;/p&gt;
+
+&lt;h3 id=&quot;解压缩包到d盘&quot;&gt;解压缩包到D盘：&lt;/h3&gt;
+
+&lt;p&gt;目录结构 如图：
+&lt;img src=&quot;/images/posts/shengxiao/sx0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;首先编译生成可执行程序代码我已经全部修改调试通过直接生成即可&quot;&gt;首先编译生成可执行程序，代码我已经全部修改调试通过,直接生成即可!&lt;/h3&gt;
+
+&lt;p&gt;服务器程序，Visual Studio 2008打开&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;D:\12生肖源码\my_sx\server\project中的Sxcs.sln工程
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;直接右击全部重新生成，生成时因链接库顺序报错再点一次生成方案，全部生成成功.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/shengxiao/sx1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;客户端程序，Visual Studio 2010打开&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;D:\12生肖源码\my_sx\CC-project\cocos2d-win32.vc2010.sln工程
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;右击全部重新生成，生成库报错再点一次生成方案，这个时间有点久，全部生成成功.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/shengxiao/sx2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;1数据库&quot;&gt;1.数据库&lt;/h3&gt;
+
+&lt;p&gt;数据库目录：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;D:\12生肖源码\数据库
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Navicat Premium连接本机Mysql，创建my_sx数据库，编码默认，运行my_sx.sql执行Sql脚本.&lt;/p&gt;
+
+&lt;h3 id=&quot;2服务端&quot;&gt;2.服务端&lt;/h3&gt;
+
+&lt;p&gt;服务端目录：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;D:\12生肖源码\my_sx\server\Server_Bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;修改：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DBServer.ini 
+GameServer.ini 
+LoginServer.ini 
+PlatServer.ini 
+ServerCenter.ini
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;配置文件中的IP地址为你自己本机的，我的IP设置的是192.168.1.2；修改密码为自己的Mysql数据库密码，我配置的是123456，运行“启动服务器(D).bat”，等待出现5个程序窗口.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/shengxiao/sx3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3客户端&quot;&gt;3.客户端&lt;/h3&gt;
+
+&lt;p&gt;客户端目录：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;D:\12生肖源码\my_sx\CC-project\samples\Cpp\Sxcs\Resources
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;UserDefault.xml是服务器配置文件,修改IP的&lt;serverIp&gt;192.168.1.2&lt;/serverIp&gt;参数，打开Sxcs.exe，双击运行,直接点开始游戏即可！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/shengxiao/sx4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;gm工具&quot;&gt;GM工具&lt;/h3&gt;
+
+&lt;p&gt;GM工具目录：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;D:\12生肖源码\my_sx\server\Tools\GM
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;打开GM.exe点登录，先开启服务端，可以发送公告，发送装备物品经验，查看在线人数，充值比率,生成CDkey.&lt;/p&gt;
+
+&lt;h3 id=&quot;游戏截图&quot;&gt;游戏截图&lt;/h3&gt;
+
+&lt;p&gt;游戏截图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/shengxiao/sx5.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/posts/shengxiao/sx6.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/posts/shengxiao/sx7.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/posts/shengxiao/sx8.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/posts/shengxiao/sx9.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/posts/shengxiao/sx10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;游戏性很好有装备技能大转盘世界boss进化宠物生肖世界地图广阔&quot;&gt;游戏性很好，有装备，技能，大转盘，世界BOSS，进化，宠物生肖，世界地图广阔！&lt;/h3&gt;
+
+&lt;h3 id=&quot;需要完整代码资源参考学习的同学加群m我&quot;&gt;需要完整代码资源参考学习的同学，加群M我！&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;游戏讨论研究群：46658218
+IOS APP及游戏开发1群：275559010
+IOS APP及游戏开发2群：255153512
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;以上是windows平台教程app和apk自行参考代码资料仅供学习参考切勿用于商业用途&quot;&gt;以上是Windows平台教程，app和apk自行参考代码，资料仅供学习参考，切勿用于商业用途！&lt;/h3&gt;
+</description>
+        <pubDate>Sat, 15 Oct 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/10/12sx/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/10/12sx/</guid>
+        
+        <category>Cocos2dx工程代码</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

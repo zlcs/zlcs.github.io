@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>LINUX SHELL编程笔记 第三部分 登录环境</title>
+  <meta name="description" content="第三部分   登录环境">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LINUX SHELL编程笔记 第三部分 登录环境">
+  <meta name="twitter:description" content="第三部分   登录环境">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="LINUX SHELL编程笔记 第三部分 登录环境">
+  <meta property="og:description" content="第三部分   登录环境">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2010/10/linuxshell3/">
+  <link rel="alternate" type="application/rss+xml" title="Lyon" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="lyon" />
+
+<!-- 站点统计 -->
+  <script 
+  async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>  
+
+<!-- 百度统计 -->
+  
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ab69018b495da982a7a7eab9599eead4";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于我
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 Lyon 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                Lyon
+                            
+                        </h2>
+                        <p>
+                           
+                                iOS / 探索者
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for Lyon" class="blog-button">Lyon</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">个人博客</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">授人以鱼，亦授人以渔.</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于我</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">LINUX SHELL编程笔记 第三部分 登录环境</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2010-10-03 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2010-10-03</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h3 id="第三部分---登录环境">第三部分   登录环境</h3>
+
+<h3 id="第13章-登录环境">第13章 登录环境</h3>
+
+<p>登录系统时，在进入命令提示符前，系统要做两个工作。键入用户名和密码后，系统检查是否为有效用户，为此需查询/etc/passwd文件。如果登录名正确并且密码有效，开始下一步过程，即登录环境。在进行下一步处理之前，先看看文件/etc/passwd。这是一个文本文件，可以任意修改其中的文本域，但要小心。此文本有7个域，并用冒号作分隔符，以下是其部分文件内容列表。在顶端加有列号，这样各域标识得更加清晰。</p>
+
+<p>第1域是登录名，第2域是加密的密码，第5域是用户全名。第6域是用户根目录，第7域是用户使用的shell。这里/bin/sh意即缺省为常规 Bourne Shell。</p>
+
+<p>Passwd文件可能还有其他格式。其中的一个版本即为实际 passwd域保存在另一个文件中。以上即为最普通格式。
+登录成功后，系统执行两个环境设置文件，第一个是 /etc/profile，第二个是.profile，位 于用户根目录下。
+系统还会处理其他的初始化文件。这里只涉及profile文件。</p>
+
+<h3 id="131-etcprofile">13.1 /etc/profile</h3>
+
+<p>用户登录时，自动读取/etc目录下profile文件，此文件包含：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>全局或局部环境变量。
+PATH信息。
+终端设置。
+安全命令。
+日期信息或放弃操作信息。
+</code></pre></div></div>
+
+<p>下面就来详细解释上述各项内容。设置全局环境变量便于用户及其进程和应用访问它。</p>
+
+<p>PATH定位包含可执行文件，库文件及一般文本文件的目录位置，便于用户快速访问。</p>
+
+<p>终端设置使系统获知用户终端的一般特性。安全命令包括文件创建模式或敏感区域的双登录提示。日期信息是一个文本文件，保存用户登录时即将发生事件的记录或放弃登录的信息文件。</p>
+
+<h3 id="132-用户的homeprofile">13.2 用户的$HOME.profile</h3>
+
+<p>/etc/profile文件执行时，用户将被放入到自己的<code class="highlighter-rouge">$HOME</code>目录中，回过头来观察passwd文件，用户的<code class="highlighter-rouge">$HOME</code>目录在倒数第2列。可以将之看作用户根目录，因为正是在这里存储了所有的私有信息。</p>
+
+<p>如果.profile已经存在，系统将参照此文件，意即对此过程并不创建另一个shell，因而在/etc/profile下设置的环境不做改动，除非在.profile中强制改动它。如果创建另一个进程，用户本地的shell变量将被覆盖。</p>
+
+<p>回到.profile，一般来说创建帐户时，一个profile文件的基本框架即随之创建。不要忘了在.profile文件中可以通过设置相关条目以不同的值或使用uset命令来覆盖/etc/profile文件中的 设置。如果愿意，可以定制用户自己的.profile文件。</p>
+
+<h3 id="133-stty用法">13.3 stty用法</h3>
+
+<p>stty用于设置终端特性。要查询现在的 stty选项，使用:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stty -a
+</code></pre></div></div>
+
+<h3 id="134-创建logout文件">13.4 创建.logout文件</h3>
+
+<p>使用Bourne shell与其他shell不同，其缺点是不包含.logout文件。此文件保存有执行exit命令时，在进程终止前执行的命令。但是通过使用trap命令，Bourneshell也可以创建自己的.logout文件。方法如下：编辑.profile文件，在最后一行加入下列命令，然后保存并退出。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>trap "$HOME /.logout"0 
+</code></pre></div></div>
+
+<p>再键入一个.logout文件，敲入下列执行命令。如果愿意，可以在此脚本中加入任何命令。</p>
+
+<p>用户退出时，调用.logout文件。过程如下：用户退出一个 shell时，传送了一个信号0，意即从现在shell中退出，在控制返回 shell继续退出命令前，.profile文件中trap行将捕获此信号并执行.logout。</p>
+
+<h3 id="第14章-环境和shell变量">第14章 环境和shell变量</h3>
+
+<p>为使shell编程更有效，系统提供了一些shell变量。shell变量可以保存诸如路径名、文件名或者一个数字这样的变量名。shell将其中任何设置都看做文本字符串。</p>
+
+<p>有两种变量，本地和环境。严格地说可以有4种，但其余两种是只读的，可以认为是特殊变量，它用于向shell脚本传递参数。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shell变量
+环境变量
+变量替换
+导出变量
+特定变量
+</code></pre></div></div>
+
+<h3 id="141-什么是shell变量">14.1 什么是shell变量</h3>
+
+<p>变量可以定制用户本身的工作环境。使用变量可以保存有用信息，使系统获知用户相关设置。变量也用于保存暂时信息。</p>
+
+<p>例如：一变量为 EDITOR，系统中有许多编辑工具，但哪一 个适用于系统呢？将此编辑器名称赋给 EDITOR，这样，在使用 cron或其他需要编辑器的应用时，这就是你将一直使用的 EDITOR取值，并将之用作缺省编辑器。</p>
+
+<p>下面是一个例子，登录的审核系统需要编辑。在菜单中选择此选项时，应用查询EDITOR变量值，其值为vi。系统知道可使用此编辑器。另一个例子需要登录数据库系统，键入下列命令：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ isql -U lyon -P abcd -S lyonserver 
+</code></pre></div></div>
+
+<p>这里-S为正在连接的服务器名称。有一变量DSQUERY保存服务器名称值。设置服务器名称值到 DSQUERY变量，这样如果登录时不使用 -S提供服务器名称，应用将查询DSQUERY变量，并使用其取值作为服务器名称。需要做的全部工作就是键入下列命令：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ isql -U lyon -P abcd 
+</code></pre></div></div>
+<p>工作方式同上例。</p>
+
+<h3 id="142-本地变量">14.2 本地变量</h3>
+
+<p>本地变量在用户现在的shell</p>
+
+<p>生命期的脚本中使用。例如，本地变量file-name取值为 loop.doc，这个值只在用户当前shell生命期有意义。如果在shell中启动另一个进程或退出，此值将无效。这个方法的优点就是用户不能对其他的shell或进程设置此变量有效。</p>
+
+<p>表14-1列出各种实际变量模式
+使用变量时，如果用花括号将之括起来，可以防止shell误解变量值，尽管不必一定要这样做，但这确实可用。要设置一本地变量，格式为：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ variable-name=val u或e ${variable-name=value}
+</code></pre></div></div>
+
+<p>注意，等号两边可以有空格。如果取值包含空格，必须用双引号括起来。shell变量可以用大小写字母。</p>
+
+<p>表14-1	变量设置时的不同模式</p>
+
+<p>Variable-name=value		设置实际值到 variable-name
+Variable-name+value		如果设置了 variable-name，则重设其值
+Variable-name:?value		如果未设置 variable-name，显示未定义用户错误信息
+Variable-name?value		如果未设置 variable-name，显示系统错误信息
+Variable-name:=value		如果未设置 variable-name，设置其值
+Variable-name:-value		同上，但是取值并不设置到 variable-name，可以被替换</p>
+
+<p><strong>14.2.1 显示变量</strong></p>
+
+<p>使用echo命令可以显示单个变量取值，并在变量名前加$，可以结合使用变量，将错误信息和环境变量LOGNAME设置到变量error-msg。</p>
+
+<p><strong>14.2.2 清除变量</strong></p>
+
+<p>使用unset命令清除变量。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> unset variable-name 
+</code></pre></div></div>
+
+<p><strong>14.2.3 显示所有本地shell变量</strong></p>
+
+<p>使用set命令显示所有本地定义的shell变量。set输出可能很长。查看输出时可以看出shell已经设置了一些用户变量以使工作环境更加容易使用。</p>
+
+<p><strong>14.2.4 结合变量值</strong></p>
+
+<p>将变量并排可以使变量结合在一起：</p>
+
+<p><strong>14.2.5 测试变量是否已经设置</strong></p>
+
+<p>有时要测试是否已设置或初始化变量。如果未设置或初始化，就可以使用另一值。此命令格式为：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>${variable:-value}
+</code></pre></div></div>
+
+<p>意即如果设置了变量值，则使用它，如果未设置，则取新值。</p>
+
+<p><strong>14.2.6 使用变量来保存系统命令参数</strong></p>
+
+<p>可以用变量保存系统命令参数的替换信息。下面的例子使用变量保存文件拷贝的文件名信息。变量source保存passwd文件的路径， dest保存cp命令中文件目标。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ SOURCE="/etc/passwd"
+$ DEST=“/tmp/paswd.bak”
+$ cp ${SOURCE}${DEST}
+</code></pre></div></div>
+
+<p><strong>14.2.7 设置只读变量</strong></p>
+
+<p>如果设置变量时，不想再改变其值，可以将之设置为只读方式。如果有人包括用户本人 想要改变它，则返回错误信息。格式如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>variable-name=value 
+readonly variable-name 
+</code></pre></div></div>
+
+<p>要查看所有只读变量，使用命令readonly即可。</p>
+
+<h3 id="143-环境变量">14.3 环境变量</h3>
+
+<p>环境变量用于所有用户进程（经常称为子进程）。登录进程称为父进程。</p>
+
+<p>shell中执行的用户进程均称为子进程。不像本地变量（只用于现在的shell）环境变量可用于所有子进程，这包括编辑器、脚本和应用。</p>
+
+<p>环境变量可以在命令行中设置，但用户注销时这些值将丢失，因此最好在 .profile文件中定义。系统管理员可能在/etc/profile文件中已经设置了一些环境变量。将之放入profile文件意味着每次登录时这些值都将被初始化。</p>
+
+<p>传统上，所有环境变量均为大写。环境变量应用于用户进程前，必须用export命令导出。 环境变量与本地变量设置方式相同。</p>
+
+<p><strong>14.3.1 设置环境变量</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VARIABLE-NAME=value；export VARIABLE-NAME 
+</code></pre></div></div>
+
+<p>在两个命令之间是一个分号，也可以这样写：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VARIABLE-NAME=value Export VARIABLE-NAME 
+</code></pre></div></div>
+
+<p><strong>14.3.2 显示环境变量</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>使用env命令可以查看所有的环境变量。
+</code></pre></div></div>
+
+<p><strong>14.3.3 清除环境变量</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>使用unset命令清除环境变量：
+</code></pre></div></div>
+
+<p><strong>14.3.4 嵌入shell变量</strong></p>
+
+<p>Brourneshell有一些预留的环境变量名，这些变量名不能用作其他用途。通常在/etc/profile中建立这些嵌入的环境变量，但也不完全是，这取决于用户自己。以下是嵌入shell变量列表。</p>
+
+<p><strong>1.CDPATH</strong></p>
+
+<p>改变目录路径变量，保留一系列由冒号隔开的路径名，用于 cd命令。如果设置了CDPATH，cd一个目录时，首先查找CDPATH，如果CDPATH指明此目录，则此目录成为当前工作目录。例子如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ CDPATH=:/home/dave/bin:/usr/loca l ；/export CDPATH. 
+</code></pre></div></div>
+
+<p>如果要</p>
+
+<p>$ cd apps 
+cd命令首先在 CDPATH中查找目录列表，如果发现apps，则它成为当前工作目录。</p>
+
+<p><strong>2.EXINIT</strong></p>
+
+<p>EXINIT变量保存使用vi编辑器时的初始化选项。例如，调用 vi时，要显示行号，且在第10个空格加入tab键，命令为：
+$ EXINIT=’set nutab=10’;export EXINIT</p>
+
+<p><strong>3.HOME</strong></p>
+
+<p>HOME目录，通常定位于passwd文件的倒数第2列，用于保存用户自身文件。设置了HOME目录，可以简单使用cd命令进入它<code class="highlighter-rouge">cd $HOME</code> 。</p>
+
+<p><strong>4.IFS</strong></p>
+
+<p>IFS用作shell指定的缺省域分隔符。原理上讲域分隔符可以是任意字符，但缺省通常为空格、新行或tab键。IFS在分隔文件或变量中各域时很有用。下面的例子将 IFS设置为冒号，然后echo PATH变量，给出一个目录分隔开来的可读性很强的路径列表。</p>
+
+<p><strong>5.LOGNAME</strong></p>
+
+<p>此变量保存登录名，应该为缺省设置，但如果没有设置，可使用下面命令完成它：</p>
+
+<p><strong>6.MAIL</strong></p>
+
+<p>MAIL变量保存邮箱路径名，缺省为 /var/spool/mail/<login name="">。shell周期性检查新邮件，如果有了新邮件，在命令行会出现一个提示信息。如果邮箱并不在以上指定位置，可以用MAIL设置。</login></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ MAIL=/usr/mail/lyon；export MAIL 
+</code></pre></div></div>
+
+<p><strong>7.MAILCHECK</strong></p>
+
+<p>MAILCHECK缺省每60s检查新邮件，但如果不想如此频繁检查新邮件，比如设为每2m，使用命令：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ MAILCHECK=1 2；0export MAILCHECK 
+</code></pre></div></div>
+
+<p><strong>8.MAILPATH</strong></p>
+
+<p>如果有多个邮箱要用到MAILPATH，此变量设置将覆盖MAIL设置。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ MAILPATH=/var/spool/lyon:/var/spool /；exmport MAILPATH 
+</code></pre></div></div>
+
+<p>上面的例子中， MAIL检测邮箱lyon和admin。</p>
+
+<p><strong>9.PATH</strong></p>
+
+<p>PATH变量保存进行命令或脚本查找的目录顺序，正确排列这个次序很重要，可以在执行命令时节省时间。你一定不想在已知命令不存在的目录下去查找它。</p>
+
+<p>通常情况，最好首先放在HOME目录下，接下来是从最常用到一般使用到不常用的目录列表次序。如果要在当前工作目录下查询，无论在哪儿，均可以使用句点操作。目录间用冒号分隔，例如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ PATH=$HOME/bin:.:/bin:/usr；/ export PATH 
+</code></pre></div></div>
+
+<p>使用上面的例子首先查找 HOME/bin目录，然后是当前工作目录，然后是/bin，最后是
+/usr/bin。
+PATH可以在系统目录下 /etc/profile中设置，也可以使用下面方法加入自己的查找目录。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ PATH=$PATH:/$HOME/bin: .export PATH 
+</code></pre></div></div>
+
+<p>这里使用了/etc/profile中定义的PATH，并加入$HOME/bin和当前工作目录。一般来说，在查找路径开始使用当前工作目录不是一个好办法，这样很容易被其他用户发现。</p>
+
+<p><strong>10.PS1</strong></p>
+
+<p>基本提示符包含 shell提示符，缺省对超级用户为#，其他为 $。可以使用任何符号作提示符</p>
+
+<p><strong>11.PS2</strong></p>
+
+<p>PS2为附属提示符，缺省为符号&gt;。PS2用于执行多行命令或超过一行的一个命令。</p>
+
+<p><strong>12.SHELL</strong></p>
+
+<p>SHELL变量保存缺省shell，通常在/etc/passwd中已设置，但是如有必要使用另一个shell，可以用如下方法覆盖当前shell：</p>
+
+<p><strong>13.TERMINFO</strong></p>
+
+<p>终端初始化变量保存终端配置文件的位置。通常在/usr/lib/terminfo或/usr/share/terminfo</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ TERMINFO=/usr/lib/terminfo；export TERMINFO 
+</code></pre></div></div>
+
+<p><strong>14.TERM</strong></p>
+
+<p>TERM变量保存终端类型。设置TERM使应用获知终端对屏幕和键盘响应的控制序列类型， 常用的有 vt100、vt200、vt220-8等。
+$ TERM=vt1 0；0 export TERM</p>
+
+<p><strong>15.TZ</strong></p>
+
+<p>时区变量保存时区值，只有系统管理员才可以更改此设置。例如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo $TZ
+</code></pre></div></div>
+
+<p>返回值表明正在使用格林威治标准时间，与GMT时差为0，并作EDT保存。</p>
+
+<p><strong>14.3.5 其他环境变量</strong></p>
+
+<p>还有一些预留的环境变量。其他系统或命令行应用将用到它们。以下是最常用的一些， 注意这些值均未有缺省设置，必须显示说明。</p>
+
+<p><strong>1.EDITOR</strong></p>
+
+<p>设置编辑器，最常用。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ EDITOR= v；i export EDITOR 
+</code></pre></div></div>
+
+<p><strong>2.PWD</strong></p>
+
+<p>当前目录路径名，用 cd命令设置此选项。</p>
+
+<p><strong>3.PAGER</strong></p>
+
+<p>保存屏幕翻页命令，如 pg、more，在查看 man文本时用到此功能。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ PAGER='pg -f -p %；d 'export PAGER 
+</code></pre></div></div>
+
+<p><strong>4.MANPATH</strong></p>
+
+<p>保存系统上man文本的目录。目录间用冒号分隔。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ MANPATH=/usr/apps/man:/usr/loca l；/emxapnort MANPATH 
+</code></pre></div></div>
+
+<p><strong>5.LPDEST或PRINTER</strong></p>
+
+<p>保存缺省打印机名，用于打印作业时指定打印机名。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ LPDEST=hp3si-systems 
+</code></pre></div></div>
+
+<p><strong>14.3.6 set命令</strong></p>
+
+<p>在<code class="highlighter-rouge">$HOME.profile</code>文件中设置环境变量时，还有另一种方法导出这些变量。使用set命令-a选项，即set-a指明所有变量直接被导出。不要在/etc/profile中使用这种方法，最好只在自己的$HOME.profile文件中使用。</p>
+
+<p><strong>14.3.7 将变量导出到子进程</strong></p>
+
+<p>shell新用户碰到的问题之一是定义的变量如何导出到子进程。前面已经讨论过环境变量的工作方式，现在用脚本实现它，并在脚本中调用另一脚本（这实际上创建了一个子进程）。</p>
+
+<p>以下是两个脚本列表father和child。father脚本设置变量 film，取值为A Few Good Men，并将变量信息返回屏幕，然后调用脚本child，这段脚本显示第一个脚本里的变量film，然后改变其值为DieHard，再将其显示在屏幕上，最后控制返回father脚本，再次显示这个变量。
+在father脚本中加入export命令，以便child脚本知道 film变量的取值，这就会工作：因为在脚本中加入了export命令，因此可以在任意多的脚本中使用变量film，它们均继承 了film的所有权。</p>
+
+<p>不可以将变量从子进程导出到文进程，然面通过重定向就可做到这一点</p>
+
+<p><strong>14.4 位置变量参数</strong></p>
+
+<p>本章开始提到有4种变量，本地、环境，还有两种变量被认为是特殊变量，因为它们是只读的。这两种变量即为位置变量和特定变量参数。先来看一看位置变量。</p>
+
+<p>如果要向一个shell脚本传递信息，可以使用位置参数完成此功能。参数相关数目传入脚本，此数目可以任意多，但只有前9个可以被访问，使用shift命令可以改变这个限制。本书后面将讲到 shift命令。参数从第一个开始，在第9个结束；每个访问参数前要加<code class="highlighter-rouge">$</code>符号。第一个参数为0，表示预留保存实际脚本名字。无论脚本是否有参数，此值均可用。</p>
+
+<p><strong>14.4.1 在脚本中使用位置参数</strong></p>
+
+<p>注意<code class="highlighter-rouge">$0</code>返回当前目录路径，如果只返回脚本名，在basename命令下参数设为<code class="highlighter-rouge">$0</code>，刚好得到脚本名字。</p>
+
+<p><strong>14.4.2 向系统命令传递参数</strong></p>
+
+<p>可以在脚本中向系统命令传递参数</p>
+
+<p><strong>14.4.3 特定变量参数</strong></p>
+
+<p>既然已经知道了如何访问和使用shell脚本中的参数，多知道一点相关信息也是很有用的，有必要知道脚本运行时的一些相关控制信息，这就是特定变量的由来。共有7个特定变量，
+见 表14-2。</p>
+
+<p>表14-2</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">特定shell</th>
+      <th style="text-align: left">变量</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><code class="highlighter-rouge">$</code>#</td>
+      <td style="text-align: left">传递到脚本的参数个数</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$<code class="highlighter-rouge">*</code></td>
+      <td style="text-align: left">以一个单字符串显示所有向脚本传递的参数。与位置变量同，此选项参数可超过 9个</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$$</td>
+      <td style="text-align: left">脚本运行的当前进程ID号</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$!</td>
+      <td style="text-align: left">后台运行的最后一个进程的进程ID号</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$@</td>
+      <td style="text-align: left">与$#相同，但是使用时加引号，并在引号中返回每个参数</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$-</td>
+      <td style="text-align: left">显示shell使用的当前选项，与set命令功能相同</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">$?</td>
+      <td style="text-align: left">显示最后命令的退出状态</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: left">表示没有错误，其他任何值表明有错误</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>14.4.4 最后的退出状态</strong></p>
+
+<p>注意，$?返回0。可以在任何命令或脚本中返回此变量以获得返回信息。
+基于此信息，可 以在脚本中做更进一步的研究，返回 0意味着成功，1为出现错误。</p>
+
+<h3 id="第15章-引号">第15章 引号</h3>
+
+<p>上一章介绍了变量和替换操作，在脚本中执行变量替换时最容易犯的一个错误就是由于 引用错误。在命令行中引用是很重要的。</p>
+
+<p><strong>15.1 引用必要性</strong></p>
+
+<p>这里只讲述引用的基本规则。因为使用引用的例子很多。本书接下来的两个部分将一一予以讲述。脚本中执行行操作时，shell将对脚本设置予以解释。要采取一种方法防止shell这样做，即使用引用号，包括各式引用或使用反斜线。一些用户在对文本字符串进行反馈操作时觉得使用引用很麻烦。有时不注意，只引用了 一半，这时问题出现了。最好在反馈文本字符串时使用双引号。</p>
+
+<p>表15-1</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">shell</th>
+      <th style="text-align: center">引用类型</th>
+      <th style="text-align: center">shell</th>
+      <th style="text-align: center">引用类型</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">””</td>
+      <td style="text-align: center">双引号</td>
+      <td style="text-align: center">｀</td>
+      <td style="text-align: center">反引号</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">’’</td>
+      <td style="text-align: center">单引号</td>
+      <td style="text-align: center">\</td>
+      <td style="text-align: center">反斜线</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="152-双引号">15.2 双引号</h3>
+
+<p>使用双引号可引用除字符$、`、\外的任意字符或字符串。这些特殊字符分别为美元符号，反引号和反斜线，对shell来说，它们有特殊意义。如果使用双引号将字符串赋给变量并反馈它，实际上与直接反馈变量并无差别。</p>
+
+<h3 id="153-单引号">15.3 单引号</h3>
+
+<p>单引号与双引号类似，不同的是shell会忽略任何引用值。换句话说，如果屏蔽了其特殊含义，会将引号里的所有字符，包括引号都作为一个字符串。</p>
+
+<h3 id="154-反引号">15.4 反引号</h3>
+
+<p>反引号用于设置系统命令的输出到变量。shell将反引号中的内容作为一个系统命令，并执行其内容。使用这种方法可以替换输出为一个变量。反引号可以与引号结合使用。</p>
+
+<h3 id="155-反斜线">15.5 反斜线</h3>
+
+<p>如果下一个字符有特殊含义，反斜线防止shell误解其含义，即屏蔽其特殊含义。
+下述字 符包含有特殊意义：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&amp; * + ^ $ ` " | ?
+</code></pre></div></div>
+
+<p>假定echo命令加*，意即以串行顺序打印当前整个目录列表，而不是一个星号 *</p>
+
+<p>在打印字符串时要加入八进制字符（ASCII相应字符），必须在前面加反斜线，否则shell将其当作普通数字处理。
+<code class="highlighter-rouge">$$</code>命令， shell解释其为现在进程ID号，使用反斜线屏蔽此意，仅打印<code class="highlighter-rouge">$$</code>使用命令expr时，用<em>表示乘法会出现错误，在</em>前加上反斜线才会正确。在echo命令中加入元字符，必须用反斜线起屏蔽作用 显示价格 $19.99。其中<code class="highlighter-rouge">$</code>屏蔽与不屏蔽将产生不同的结果。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1) 反馈字符串用双引号；但不要引用反馈本身。
+2) 如果使用引用得到的结果不理想，再试另一种，毕竟只有三种引用方式，可以充分尝试。
+</code></pre></div></div>
+
+
+  </section>
+</article>
+
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2010/10/linuxshell1/" data-toggle="tooltip" data-placement="top" title="LINUX SHELL编程笔记 第一部分  shell">上一篇：  <span>LINUX SHELL编程笔记 第一部分  shell</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2010/10/linuxshell5/" data-toggle="tooltip" data-placement="top" title="LINUX SHELL编程笔记 第五部分  高级shell编程技巧">下一篇：  <span>LINUX SHELL编程笔记 第五部分  高级shell编程技巧</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div class="ds-thread" data-thread-key="/2010/10/linuxshell3/" data-title="LINUX SHELL编程笔记 第三部分 登录环境" data-url="http://localhost:4000/2010/10/linuxshell3/"></div>
+
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"Lyon"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/5485975878" title="@5485975878 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="mailto:275559010@qq.com" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; Lyon 2017 
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+  </body>
+
+</html>

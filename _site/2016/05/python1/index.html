@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Python编码规范</title>
+  <meta name="description" content="介绍">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Python编码规范">
+  <meta name="twitter:description" content="介绍">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Python编码规范">
+  <meta property="og:description" content="介绍">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2016/05/python1/">
+  <link rel="alternate" type="application/rss+xml" title="Lyon" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="lyon" />
+
+<!-- 站点统计 -->
+  <script 
+  async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>  
+
+<!-- 百度统计 -->
+  
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ab69018b495da982a7a7eab9599eead4";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于我
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 Lyon 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                Lyon
+                            
+                        </h2>
+                        <p>
+                           
+                                iOS / 探索者
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for Lyon" class="blog-button">Lyon</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">个人博客</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">授人以鱼，亦授人以渔.</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于我</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">Python编码规范</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2016-05-25 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2016-05-25</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h3 id="介绍">介绍</h3>
+
+<p>Python编码规范</p>
+
+<h3 id="一命名规范">一.命名规范</h3>
+
+<p><strong>1. 变量命名规范</strong></p>
+
+<blockquote>
+  <ul>
+    <li>变量名表述清楚,使用英文词汇;</li>
+    <li>命名较长时可使用英文缩写，但尽量使用约定俗成的缩写,例如:position缩写为pos、message缩写为msg;</li>
+    <li>使用下划线命名法,即全小写英文字母,单词之间使用下划线（“_”）分隔;</li>
+    <li>变量名前不使用任何表示类型的前缀;</li>
+    <li>类的私有成员变量以一个下划线“_”开头,例如：self._name;</li>
+    <li>常量所有字母大写,单词之间使用下划线（“_”）分隔，例如：FRAME_RATE;</li>
+    <li>不要使用形如__xxxx__的系统保留字命名方式.</li>
+  </ul>
+</blockquote>
+
+<p><strong>2. 函数命名规范</strong></p>
+
+<blockquote>
+  <ul>
+    <li>命名规则与变量相同（即也是全小写的下划线命名法）.</li>
+  </ul>
+</blockquote>
+
+<p><strong>3．类的命名规范</strong></p>
+
+<blockquote>
+  <ul>
+    <li>类名使用帕斯卡命名法,即单词首字母大写,其余字母小写,不使用下划线连接,例如：class ChatDialog(DialogBase):;</li>
+    <li>类名不使用任何前缀，例如：class Player():不要写成class CPlayer():.</li>
+  </ul>
+</blockquote>
+
+<p><strong>4．目录、文件（模块）命名规范</strong></p>
+
+<blockquote>
+  <ul>
+    <li>目录名和模块名全小写,单词之间直接连接,不使用任何分隔符;</li>
+    <li>模块名要尽量简短,不包含下划线.</li>
+  </ul>
+</blockquote>
+
+<h3 id="二布局规范">二.布局规范</h3>
+
+<p><strong>1. 变量与常量</strong></p>
+
+<blockquote>
+  <ul>
+    <li>尽量避免使用全局变量,除非是作为常量使用,所有常量的定义放在单独一个模块consts.py中，便于共享;</li>
+    <li>同一个类的所有对象共享的变量使用类的变量;</li>
+    <li>多行变量赋值语句不要做无谓的对齐,只需要在“=”两边各保留一个空格.</li>
+  </ul>
+</blockquote>
+
+<p><strong>2.	缩进</strong></p>
+
+<blockquote>
+  <ul>
+    <li>必须使用TAB缩进,禁止使用空格缩进;</li>
+    <li>编辑器中请设置TAB占用四个字符位,不使用空格代替TAB.</li>
+  </ul>
+</blockquote>
+
+<p><strong>3. 空格</strong></p>
+
+<blockquote>
+  <ul>
+    <li>双目运算符（如：“+”、“*=”、“&lt;=”、“and”等）,两侧各留一个空格,如：a = b + c、 index &lt; 0 or index &gt;= size;</li>
+    <li>冒号“:”左侧不加空格，如果用在非行尾,则其右侧加一个空格,例如,字典对象中,d = { key: value }</li>
+    <li>逗号分隔符的左侧不加空格，右侧加一个空格;</li>
+    <li>函数名、类名和小括号之间不加空格,各种序列(元组、列表、字符串)和字典对象做索引运算时,对象名和中括号之间不加空格,例如class Monster():,get_width()，monsters[3];</li>
+    <li>小括号和中括号的内侧不加空格,如(a + b),def init(int size):,npcs[npc_idx]，names = [“Jane”, “Bill “];</li>
+    <li>大括号内侧加一个空格，例如：d = { key: value }。</li>
+  </ul>
+</blockquote>
+
+<p><strong>4. 空行</strong></p>
+
+<blockquote>
+  <ul>
+    <li>每一个函数之间至少保留一个空行,每个类定义之间保留两个空行;</li>
+    <li>在函数体内，逻辑相关紧密的代码行作为一个段落,段落间保留一个空行;</li>
+    <li>不同种类模块的import语句之间保留一个空行.</li>
+  </ul>
+</blockquote>
+
+<p><strong>5. 断行</strong></p>
+
+<blockquote>
+  <ul>
+    <li>避免过长的代码行,最大长度不超过100个字符,如果过长应该在适当的位置换行,换行后多出一个TAB缩进;</li>
+    <li>续行符“\”前要留一个空格.</li>
+  </ul>
+</blockquote>
+
+<p><strong>6. 模块导入（import）</strong></p>
+
+<blockquote>
+  <ul>
+    <li>多个模块如果关联紧密可以在一条import语句中导入,否则分开多条语句;</li>
+    <li>先导入Python内置模块,再导入第三方模块,最后导入自己项目中的其他模块,几种模块间用空行分隔开;</li>
+    <li>不要使用from module import *,除非是常量定义模块和确保不会出现命名空间冲突的模块.</li>
+  </ul>
+</blockquote>
+
+<p><strong>7. 分支和循环</strong></p>
+
+<blockquote>
+  <ul>
+    <li>不要将if语句和分支写成一行,例如：if x in range(10): print x不是好代码,“print x”应该另起一行并多一个TAB缩进;</li>
+    <li>不要将for语句、while语句和循环体写成一行.</li>
+  </ul>
+</blockquote>
+
+<p><strong>8. 注释</strong></p>
+
+<blockquote>
+  <ul>
+    <li>要习惯写注释,英文中文皆可,只要表述准确,特别是接口和不易读懂的代码应做详细注释,同时避免无用的注释;</li>
+    <li>注释符“#”后和注释内容之间留一个空格,使用“TODO:”标签标注以后会增加或完善的内容,例如：# TODO: 在此处添加镜头特效.</li>
+  </ul>
+</blockquote>
+
+<h3 id="资料仅供学习参考切勿用于商业用途">资料仅供学习参考，切勿用于商业用途！</h3>
+
+<blockquote>
+  <ul>
+    <li>游戏讨论研究群：46658218</li>
+    <li>IOS APP及游戏开发1群：275559010</li>
+    <li>IOS APP及游戏开发2群：255153512</li>
+  </ul>
+</blockquote>
+
+
+
+  </section>
+</article>
+
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2016/05/xy1/" data-toggle="tooltip" data-placement="top" title="《西游类主题回合制Linux服务端》第一部分 从代码到运行">上一篇：  <span>《西游类主题回合制Linux服务端》第一部分 从代码到运行</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2016/07/dhxy2/" data-toggle="tooltip" data-placement="top" title="《大话西游2》-从0到D发行版本">下一篇：  <span>《大话西游2》-从0到D发行版本</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div class="ds-thread" data-thread-key="/2016/05/python1/" data-title="Python编码规范" data-url="http://localhost:4000/2016/05/python1/"></div>
+
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"Lyon"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/5485975878" title="@5485975878 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="mailto:275559010@qq.com" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; Lyon 2017 
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+  </body>
+
+</html>
