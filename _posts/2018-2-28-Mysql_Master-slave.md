@@ -278,7 +278,7 @@ CHANGE MASTER TO MASTER_HOST='192.168.1.21',MASTER_USER='lyon',MASTER_PASSWORD='
 start slave;
 ``` 
 
-查看从状态
+查看从服务器状态
 
 ``` 
 show slave status\G
