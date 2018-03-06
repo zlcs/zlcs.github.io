@@ -89,7 +89,7 @@ Mysql5.7.21
 
 ### 安装  
 
-安装Centos7 64位，分别修改主机名：
+Centos7 64位，分别修改主机名：
 ``` 
 hostnamectl set-hostname Server1
 hostnamectl set-hostname Server2
