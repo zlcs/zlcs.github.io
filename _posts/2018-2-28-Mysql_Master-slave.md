@@ -38,7 +38,7 @@ MySQL支持单向、异步复制，复制过程中一个服务器充当主服务
 # mysql建立主从服务器配置
 
 
-场景描述：
+### 场景描述：
 
 ``` 
 Cetos 7 64位 操作系统
@@ -95,8 +95,6 @@ grep 'temporary password' /var/log/mysqld.log
 
 ![](/images/posts/Mysql_Master-slave/passwd.jpg)
 
-![](/images/posts/Mysql_Master-slave/passwd2.jpg)
-
 修改默认密码：
 ``` 
 mysql -uroot -p
@@ -149,9 +147,8 @@ firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，
 systemctl restart mysqld
 ``` 
 
-### 配置 
-一 .主Mysql服务器设置
-1.启动主mysql服务器Server1，授权给从数据库服务器192.168.1.22
+### 配置主Mysql服务器
+1.启动Server1主服务器mysql，授权给从数据库服务器192.168.1.22
 
 ``` 
 grant replication slave on * . * to ‘lyon’@’192.168.1.22’ IDENTIFIED BY 'W+j9h,:f?K)i1' ;
@@ -192,8 +189,8 @@ show master status;
 
 ![](/images/posts/Mysql_Master-slave/file_Position.jpg)
 
-二 .从Mysql服务器设置
-1.启动从mysql服务器Server2，创建数据库
+### 配置从Mysql服务器
+1.启动Server2从服务器mysql，创建数据库
 
 ``` 
 mysqladmin -uroot -p create MyDB
@@ -236,17 +233,11 @@ max_binlog_size = 10485760#每个日志文件大小
 systemctl restart mysqld
 ``` 
 
-配置从数据库
+配置从数据库对主数据库信息：
 
 ``` 
 stop slave;
-``` 
-
-``` 
 CHANGE MASTER TO MASTER_HOST='192.168.1.21',MASTER_USER='lyon',MASTER_PASSWORD='W+j9h,:f?K)i1',MASTER_LOG_FILE='updatelog.000002',MASTER_LOG_POS=154;
-
-``` 
-``` 
 start slave;
 ``` 
 
@@ -254,9 +245,6 @@ start slave;
 
 ``` 
 show slave status\G
-``` 
-
-``` 
 Slave_IO_Running: Yes
 Slave_SQL_Running: Yes
 Seconds_Behind_Master: 0
@@ -275,7 +263,7 @@ show full processlist;
 
 ![](/images/posts/Mysql_Master-slave/master-processlist.jpg)
 
-从Mysql服务器导入主数据库备份的MyDB_backup.sql文件
+Server2从服务器mysql导入主数据库备份的MyDB_backup.sql文件
 
 ``` 
 stop slave;
@@ -292,14 +280,4 @@ insert into Test values(null,'测试同步',0);
 ![](/images/posts/Mysql_Master-slave/ok.jpg)
 
 
-### 个人观点：工具完整，代码齐全，游戏引擎可以单独使用，可二次开发！
-
-### 需要完整代码资源，技术支持，参考学习的同学，加群M我！
-
-``` 
-游戏讨论研究群：46658218
-IOS APP及游戏开发1群：275559010
-IOS APP及游戏开发2群：255153512
-``` 
-
-### 以上是Windows平台教程，本文只是简述，详细讨论可以联系我，资料仅供学习参考，切勿用于商业用途！
+### 以上是教程，本文只是简述，详细讨论可以联系我，资料仅供学习参考！
