@@ -6,7 +6,7 @@ tags:  LINUX Mysql
 ---
 
 
-## 一.mysql复制概述
+### 一.mysql复制概述
     MySQL支持单向、异步复制，复制过程中一个服务器充当主服务器，而一个
 或多个其它服务器充当从服务器。MySQL复制基于主服务器在二进制日志中跟
 踪所有对数据库的更改(更新、删除等等)。因此，要进行复制，必须在主服务
@@ -28,11 +28,15 @@ tags:  LINUX Mysql
 的更新。在从服务器上，读取和执行更新语句被分成两个独立的任务。当从服
 务器启动时，其I/O线程可以很快地从主服务器索取所有二进制日志内容，即使
 SQL线程执行更新的远远滞后。
-  
+
+
 1.复制线程状态
+
+
 通过show slave status/G和show master status可以查看复制线程状态。常见的线
 程状态有：
 
+```
 （1）主服务器Binlog Dump线程
 ·         Has sent all binlog to slave; waiting for binlog to be updated
 线程已经从二进制日志读取所有主要的更新并已经发送到了从服务器。线程现
@@ -49,18 +53,22 @@ SQL线程执行更新的远远滞后。
 ·         Has read all relay log; waiting for the slave I/O thread to update it
 线程已经处理了中继日志文件中的所有事件，现在正等待I/O线程将新事件写入
 中继日志。
- 
+```
+
+
 2.复制过程中使用的传递和状态文件
 
-默认情况，中继日志使用host_name-relay-bin.nnnnnn形式的文件名，其中
+
+    默认情况，中继日志使用host_name-relay-bin.nnnnnn形式的文件名，其中
 host_name是从服务器主机名，nnnnnn是序列号。中继日志与二进制日志的格
 式相同，并且可以用mysqlbinlog读取。
 从服务器在data目录中另外创建两个小文件。这些状态文件默认名为主
 master.info和relay-log.info。状态文件保存在硬盘上，从服务器关闭时不会丢
 失。下次从服务器启动时，读取这些文件以确定它已经从主服务器读取了多少
 二进制日志，以及处理自己的中继日志的程度。
- 
-如果要备份从服务器的数据，还应备份这两个小文件以及中继日志文件。它们
+
+
+    如果要备份从服务器的数据，还应备份这两个小文件以及中继日志文件。它们
 用来在恢复从服务器的数据后继续进行复制。如果丢失了中继日志但仍然有
 relay-log.info文件，可以通过检查该文件来确定SQL线程已经执行的主服务器中
 二进制日志的程度。然后可以用Master_Log_File和Master_LOG_POS选项执行
