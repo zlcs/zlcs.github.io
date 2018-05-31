@@ -8,7 +8,6 @@ tags:  LINUX Mysql
 
 ### 介绍
 
-来自百科的简介：
 
 MySQL-Proxy调度服务器
 

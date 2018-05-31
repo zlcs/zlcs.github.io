@@ -75,7 +75,7 @@ relay-log.info文件，可以通过检查该文件来确定SQL线程已经执行
 CHANGE MASTER TO来告诉从服务器重新从该点读取二进制日志。
 
 
-### 场景描述：
+### 三.场景描述：
 
 ``` 
 Cetos 7 64位 操作系统
@@ -87,7 +87,7 @@ Mysql5.7.21
 ``` 
 ![](/images/posts/Mysql_Master-slave/database.jpg)
 
-### 安装  
+### 四.安装  
 
 Centos7 64位，分别修改主机名：
 ``` 
@@ -184,7 +184,7 @@ firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，
 systemctl restart mysqld
 ``` 
 
-### 配置主Mysql服务器
+### 五.配置主Mysql服务器
 1.启动Server1主服务器mysql，授权给从数据库服务器192.168.1.22
 
 ``` 
@@ -308,7 +308,7 @@ mysql -uroot -p MyDB < MyDB_backup.sql
 start slave;
 ``` 
 
-验证
+### 六.验证
 
 ``` 
 insert into Test values(null,'测试同步',0);
