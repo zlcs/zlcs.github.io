@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  C3引擎系列专题七：《盛世ol》
+title:  C3引擎系列专题七:《盛世ol》
 date: 2011-12-30
 tags: Windows工程代码 客户端网游
 ---
