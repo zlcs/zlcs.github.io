@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  基于Mysql5.7.21读写分离
-date: 2018-2-28
+date: 2018-02-28
 tags:  LINUX Mysql
 ---
 
