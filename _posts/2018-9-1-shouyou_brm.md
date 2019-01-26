@@ -38,11 +38,11 @@ tags: 手游
 
 如图：
 
-![](/images/posts/shouyou_brm./shouyou_brm_1.jpg)
+![](/images/posts/shouyou_brm/shouyou_brm_1.jpg)
 
-![](/images/posts/shouyou_brm./shouyou_brm_2.jpg)
+![](/images/posts/shouyou_brm/shouyou_brm_2.jpg)
 
-![](/images/posts/shouyou_brm./shouyou_brm_3.jpg)
+![](/images/posts/shouyou_brm/shouyou_brm_3.jpg)
 
 ### 闲谈：	
 
