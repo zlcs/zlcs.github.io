@@ -23,11 +23,13 @@ iOSApp 手游 软件工程探索者 独立游戏制作人.
 <p>
 <p>
 <p>
-#electromechanical群：46658218
-#<p>
-#IOS APP及游戏开发群：255153512
-#<p>
-#<p>
+/* 
+electromechanical群：46658218
+<p>
+IOS APP及游戏开发群：255153512
+<p>
+<p>
+ */
 IOS APP及游戏开发群：275559010
 
 
