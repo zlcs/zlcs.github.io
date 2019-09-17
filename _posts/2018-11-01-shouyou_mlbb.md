@@ -2,7 +2,7 @@
 layout: post
 title:  手游-《魔力宝贝》
 date: 2018-11-01
-tags: 手游
+tags: 回合制 手游
 ---
 
 		
