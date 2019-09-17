@@ -2,7 +2,7 @@
 layout: post
 title:  Python编码规范
 date: 2016-05-25
-tags: Python
+tags: Python 编码规范
 ---
 
 
