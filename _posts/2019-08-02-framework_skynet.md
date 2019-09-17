@@ -13,7 +13,6 @@ tags: skynet
 
 使用skynet节点，通过master，认识网络中所有其它skynet节点，它们相互一一建立单向通讯通道。
 
-**skynet**
 
 ### 运行环境
 如图：
