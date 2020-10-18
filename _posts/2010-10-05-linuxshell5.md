@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  LINUX SHELL编程笔记 第五部分  高级shell编程技巧
+title:  Linux Shell编程笔记 第五部分  高级shell编程技巧
 date: 2010-10-05
-tags: Linux SHELL编程笔记
+tags: Linux Shell编程笔记
 ---
 
 

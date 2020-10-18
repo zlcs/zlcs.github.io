@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  LINUX SHELL编程笔记 第一部分  shell
+title:  Linux Shell编程笔记 第一部分  shell
 date: 2010-10-01
-tags: Linux SHELL编程笔记
+tags: Linux Shell编程笔记
 ---
 
 

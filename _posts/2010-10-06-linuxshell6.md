@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  LINUX SHELL编程笔记 附录 常用shell命令
+title:  Linux Shell编程笔记 附录 常用shell命令
 date: 2010-10-06
-tags: Linux SHELL编程笔记
+tags: Linux Shell编程笔记
 ---
 
 
