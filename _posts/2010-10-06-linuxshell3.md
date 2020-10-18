@@ -2,7 +2,7 @@
 layout: post
 title:  LINUX SHELL编程笔记 第三部分 登录环境
 date: 2010-10-03
-tags: LINUX SHELL编程笔记
+tags: Linux SHELL编程笔记
 ---
 
 ### 第三部分   登录环境
